@@ -87,3 +87,16 @@ for expected in ("silabs-grid-drift", "silabs-node-pulse", "silabs-scan", "prefe
 assert "background:rgba(255,255,255,.78)" in css, "Light header background missing"
 assert "linear-gradient(180deg,#ffffff 0%,#fcfcff 50%,#eef1ff 100%)" in css, "Light hero background missing"
 print("PASS: light animated computing hero, accessible motion, expanded company name")
+
+# A cached stylesheet must never be allowed to hide the company name or
+# turn the decorative animation into a third grid column.
+asset_cache = next(h for h in headers["headers"] if h["source"] == "/assets/(.*)")
+assert next(h["value"] for h in asset_cache["headers"] if h["key"] == "Cache-Control") == "public, max-age=0, must-revalidate"
+assert 'href="/assets/styles.css?v=20261017-hero-cache-fix"' in source, "Stylesheet needs a fresh asset URL"
+assert '<span class="tech-code code-one"></span>' in source
+assert '<span class="tech-code code-two"></span>' in source
+assert '<span class="tech-code code-three"></span>' in source
+assert '<span class="tech-bracket bracket-one"></span>' in source
+assert ".hero-stage .code-one::before" in css and ".hero-stage .hero-computing-bg{position:absolute" in css
+assert source.count('class="hero-copy"') == 1 and source.count('class="hero-art"') == 1
+print("PASS: cache-busted stylesheet, no unstyled code, hero grid fallback")
