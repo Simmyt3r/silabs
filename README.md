@@ -7,7 +7,7 @@ Official corporate website source for **SIMEON'S LABORATORIES AND CO TECHNOLOGIE
 ## What is included
 
 - Responsive, accessible public-facing website with sections for services, products, academy, about, process and contact.
-- Product showcase: UniXpress, CampPhoto AI, iRoya, MyPlatoon, TechDialect and Silabs AI. ChombuTar and CareerMirror appear separately as ecosystem partners. Maturity labels avoid misrepresenting development-stage products.
+- Product showcase: UniXpress, CampPhoto AI, iRoya (hospitality and hotel booking/operations), MyPlatoon, TechDialect and Silabs AI. ChombuTar and CareerMirror appear separately as ecosystem partners. Maturity labels avoid misrepresenting development-stage products.
 - Nine leadership profiles based on the company profile dated **2024–2025**. Current-year board and role confirmation is still required.
 - Mobile navigation, keyboard-focus styles, reduced-motion handling and working enquiry flow.
 - A **mailto-based contact form**. It opens the visitor's email client and **does not send or store** enquiries. This is deliberate: no deceptive success message, server-side API key or database.
@@ -79,3 +79,15 @@ This initial implementation intentionally avoids invented testimonials, customer
 ## Corporate source notes
 
 The registered company name, CAC RC 7740645, ICICLE values and nine listed directors were taken from the supplied *Company Profile (2024–2025)*. This source is historical and the leadership line-up should be reconfirmed before treating appointments as current. The Silabs and UniXpress graphics were provided by the company and stored as small optimized WebP copies; the prior illustrative graphic and invented brand lettermark are no longer used.
+
+## Official brand palette
+
+Colors were sampled from the company-supplied Silabs logo. The website uses:
+
+- **Logo navy:** `#00006A` for dark corporate backgrounds and primary identity.
+- **Logo royal blue:** `#3130BC` for headings, links, brand accents and interface details.
+- **Soft blue-white:** `#EEF0FF` for neutral surfaces, with accessible lighter blue buttons on navy.
+
+The site retains green only where it carries semantic meaning (such as available/confirmed status), not as a competing corporate brand color.
+
+**iRoya** is a hospitality technology platform for independent hotels, supporting direct booking, property room inventory, rates, reservations and hotel operations. Do not describe iRoya as a messaging or social communication product.

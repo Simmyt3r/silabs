@@ -61,3 +61,16 @@ for director in ("Sarverun Simeon Tertese", "Abel Priscilla", "Ishaq Muhammad Id
     assert director in directors_html, f"Missing director: {director}"
 assert "silabs-official.webp" in source and "unixpress-official.webp" in source
 print("PASS: official logos, six products, two partners and nine directors")
+
+# Confirm the website reflects the approved logo colors and iRoya's hospitality scope.
+css = (ROOT / "assets/styles.css").read_text(encoding="utf-8").lower()
+assert "--brand-navy:#00006a" in css, "Official dark blue missing"
+assert "--brand-royal:#3130bc" in css, "Official royal blue missing"
+assert "hospitality technology" in products_html.lower(), "iRoya category is not hospitality"
+iroya_html = products_html.split('product-card product-iroya', 1)[1].split('</article>', 1)[0].lower()
+for required in ("hotel", "booking", "reservations", "room inventory", "front-desk"):
+    assert required in iroya_html, f"iRoya must describe {required}"
+for wrong in ("messaging", "digital communication", "we're connected"):
+    assert wrong not in iroya_html, f"Old iRoya messaging description remains: {wrong}"
+assert '<meta name="theme-color" content="#00006A">' in source
+print("PASS: official blue palette, hospitality-specific iRoya content and imagery")
