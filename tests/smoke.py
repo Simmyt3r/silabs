@@ -56,11 +56,14 @@ for product in ("UniXpress", "CampPhoto AI", "iRoya", "MyPlatoon", "TechDialect"
 for partner in ("ChombuTar", "CareerMirror"):
     assert partner in partners_html, f"Missing partner: {partner}"
     assert partner not in products_html, f"Partner is misclassified: {partner}"
-assert directors_html.count('class="director-card') == 9
-for director in ("Sarverun Simeon Tertese", "Abel Priscilla", "Ishaq Muhammad Idris", "Abu Princess Tarfa", "Abubakar Mustapha Sadiq", "Ishaya Hakuri", "Simon Nancy Mshellia", "Abdullahi Ahmad", "Agape Dimas"):
+assert directors_html.count('class="director-card') == 8
+for director in ("Sarverun Simeon Tertese", "Abel Priscilla", "Ishaq Muhammad Idris", "Abu Princess Tarfa", "Abubakar Mustapha Sadiq", "Ishaya Hakuri", "Simon Nancy Mshellia", "Abdullahi Ahmad"):
     assert director in directors_html, f"Missing director: {director}"
+assert "Agape Dimas" not in source, "Former HR director should not appear on website"
+assert directors_html.count("<h3>Abubakar Mustapha Sadiq</h3>") == 1
+assert "<h3>Abubakar Mustapha Sadiq</h3><p>Director of Public Relations and Human Resources</p>" in directors_html
 assert "silabs-official.webp" in source and "unixpress-official.webp" in source
-print("PASS: official logos, six products, two partners and nine directors")
+print("PASS: official logos, six products, two partners and eight directors")
 
 # Confirm the website reflects the approved logo colors and iRoya's hospitality scope.
 css = (ROOT / "assets/styles.css").read_text(encoding="utf-8").lower()

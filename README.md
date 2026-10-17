@@ -8,7 +8,7 @@ Official corporate website source for **SIMEON'S LABORATORIES AND CO TECHNOLOGIE
 
 - Responsive, accessible public-facing website with sections for services, products, academy, about, process and contact.
 - Product showcase: UniXpress, CampPhoto AI, iRoya (hospitality and hotel booking/operations), MyPlatoon, TechDialect and Silabs AI. ChombuTar and CareerMirror appear separately as ecosystem partners. Maturity labels avoid misrepresenting development-stage products.
-- Nine leadership profiles based on the company profile dated **2024–2025**. Current-year board and role confirmation is still required.
+- Eight leadership profiles, updated in October 2026: Abubakar Mustapha Sadiq now covers both Public Relations and Human Resources. The former HR director has been removed. Other appointments originate from the **2024–2025** company profile and should still be verified periodically.
 - Mobile navigation, keyboard-focus styles, reduced-motion handling and working enquiry flow.
 - A **mailto-based contact form**. It opens the visitor's email client and **does not send or store** enquiries. This is deliberate: no deceptive success message, server-side API key or database.
 - Basic organisation structured data, social metadata, privacy page and security headers.
@@ -78,7 +78,7 @@ This initial implementation intentionally avoids invented testimonials, customer
 
 ## Corporate source notes
 
-The registered company name, CAC RC 7740645, ICICLE values and nine listed directors were taken from the supplied *Company Profile (2024–2025)*. This source is historical and the leadership line-up should be reconfirmed before treating appointments as current. The Silabs and UniXpress graphics were provided by the company and stored as small optimized WebP copies; the prior illustrative graphic and invented brand lettermark are no longer used.
+The registered company name, CAC RC 7740645, ICICLE values and original director list were taken from the supplied *Company Profile (2024–2025)*. Leadership has since been updated based on a direct October 2026 instruction: Agape Dimas is no longer associated with the company, and Abubakar Mustapha Sadiq now oversees Public Relations and Human Resources. Other listed appointments should be periodically reconfirmed. The Silabs and UniXpress graphics were provided by the company and stored as small optimized WebP copies; the prior illustrative graphic and invented brand lettermark are no longer used.
 
 ## Official brand palette
 
