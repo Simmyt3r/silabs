@@ -1,0 +1,35 @@
+name: Corporate website checks
+
+on:
+  push:
+    paths:
+      - "index.html"
+      - "privacy.html"
+      - "assets/**"
+      - "vercel.json"
+      - "tests/**"
+      - ".github/workflows/site-checks.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "privacy.html"
+      - "assets/**"
+      - "vercel.json"
+      - "tests/**"
+      - ".github/workflows/site-checks.yml"
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check site markup and links
+        run: python tests/smoke.py
+      - name: Check JavaScript syntax
+        run: node --check assets/site.js
