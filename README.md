@@ -1,4 +1,4 @@
-# Silabs | Corporate website
+# Silabs And Co Technologies Ltd | Corporate website
 
 Official corporate website source for **SIMEON'S LABORATORIES AND CO TECHNOLOGIES LTD (Silabs)**.
 
@@ -91,3 +91,7 @@ Colors were sampled from the company-supplied Silabs logo. The website uses:
 The site retains green only where it carries semantic meaning (such as available/confirmed status), not as a competing corporate brand color.
 
 **iRoya** is a hospitality technology platform for independent hotels, supporting direct booking, property room inventory, rates, reservations and hotel operations. Do not describe iRoya as a messaging or social communication product.
+
+## Light animated corporate hero
+
+The landing page opens with a light white-to-blue stage in official brand colors, a subtly drifting computing grid, discreet circuit lines, pulsing nodes, soft scanning light, and floating monospace code. The illustration panels also use light surfaces with sufficient contrast. Motion is decorative, has no extra JavaScript dependencies, and is disabled via `prefers-reduced-motion`. The expanded visible company brand is **Silabs And Co Technologies Ltd**; the registered legal name remains **SIMEON'S LABORATORIES AND CO TECHNOLOGIES LTD** in the organizational record and legal footer. Existing product names (including Silabs AI), email addresses, and URLs have not been changed.

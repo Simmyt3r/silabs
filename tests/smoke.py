@@ -74,3 +74,16 @@ for wrong in ("messaging", "digital communication", "we're connected"):
     assert wrong not in iroya_html, f"Old iRoya messaging description remains: {wrong}"
 assert '<meta name="theme-color" content="#00006A">' in source
 print("PASS: official blue palette, hospitality-specific iRoya content and imagery")
+
+# The opening section must be light, accessible and use the requested company name.
+assert 'class="hero-stage"' in source, "Light hero stage absent"
+assert '<div class="hero-computing-bg" aria-hidden="true">' in source
+assert source.count('class="brand-name">Silabs And Co ') == 2, "Header and footer must show complete brand"
+assert "Silabs And Co Technologies Ltd | Technology for Everyone" in source
+assert "SIMEON'S LABORATORIES AND CO TECHNOLOGIES LTD" in source, "Keep registered legal identity"
+assert "Silabs AI" in products_html, "Preserve product brand"
+for expected in ("silabs-grid-drift", "silabs-node-pulse", "silabs-scan", "prefers-reduced-motion:reduce", ".hero-stage .hero h1", ".hero-stage .primary-nav.is-open"):
+    assert expected in css, f"Missing hero feature or accessibility rule: {expected}"
+assert "background:rgba(255,255,255,.78)" in css, "Light header background missing"
+assert "background:linear-gradient(95deg,#fff" not in css[-len(heroCSS):], "Wrong light hero gradient"
+print("PASS: light animated computing hero, accessible motion, expanded company name")
