@@ -7,7 +7,8 @@ Official corporate website source for **SIMEON'S LABORATORIES AND CO TECHNOLOGIE
 ## What is included
 
 - Responsive, accessible public-facing website with sections for services, products, academy, about, process and contact.
-- Product showcase: UniXpress, ChombuTar, TechDialect and Silabs AI. Product maturity labels avoid implying unfinished products are fully launched.
+- Product showcase: UniXpress, CampPhoto AI, iRoya, MyPlatoon, TechDialect and Silabs AI. ChombuTar and CareerMirror appear separately as ecosystem partners. Maturity labels avoid misrepresenting development-stage products.
+- Nine leadership profiles based on the company profile dated **2024–2025**. Current-year board and role confirmation is still required.
 - Mobile navigation, keyboard-focus styles, reduced-motion handling and working enquiry flow.
 - A **mailto-based contact form**. It opens the visitor's email client and **does not send or store** enquiries. This is deliberate: no deceptive success message, server-side API key or database.
 - Basic organisation structured data, social metadata, privacy page and security headers.
@@ -57,7 +58,8 @@ No environment variables, database migrations or server runtime are required.
 ## Before announcing launch
 
 - [ ] Replace the temporary \`assets/brand.svg\` with Silabs' **official approved logo**.
-- [ ] Confirm each published product URL and maturity label.
+- [ ] Confirm each product URL and its development status.
+- [ ] Confirm director names and appointments against the current board, since the profile supplied covers 2024–2025.
 - [ ] Confirm contact email and telephone number.
 - [ ] Verify the main corporate domain and then add canonical and sitemap URLs.
 - [ ] Test contact handoff on Windows, Android and iOS with a configured email application.
@@ -73,3 +75,7 @@ No environment variables, database migrations or server runtime are required.
 - WhatsApp: +234 903 993 0006
 
 This initial implementation intentionally avoids invented testimonials, customer logos, staff counts, fabricated performance metrics and unsupported certifications.
+
+## Corporate source notes
+
+The registered company name, CAC RC 7740645, ICICLE values and nine listed directors were taken from the supplied *Company Profile (2024–2025)*. This source is historical and the leadership line-up should be reconfirmed before treating appointments as current. The Silabs and UniXpress graphics were provided by the company and stored as small optimized WebP copies; the prior illustrative graphic and invented brand lettermark are no longer used.
