@@ -85,5 +85,5 @@ assert "Silabs AI" in products_html, "Preserve product brand"
 for expected in ("silabs-grid-drift", "silabs-node-pulse", "silabs-scan", "prefers-reduced-motion:reduce", ".hero-stage .hero h1", ".hero-stage .primary-nav.is-open"):
     assert expected in css, f"Missing hero feature or accessibility rule: {expected}"
 assert "background:rgba(255,255,255,.78)" in css, "Light header background missing"
-assert "background:linear-gradient(95deg,#fff" not in css[-len(heroCSS):], "Wrong light hero gradient"
+assert "linear-gradient(180deg,#ffffff 0%,#fcfcff 50%,#eef1ff 100%)" in css, "Light hero background missing"
 print("PASS: light animated computing hero, accessible motion, expanded company name")
