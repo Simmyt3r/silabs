@@ -95,7 +95,7 @@ print("PASS: light animated computing hero, accessible motion, expanded company 
 # turn the decorative animation into a third grid column.
 asset_cache = next(h for h in headers["headers"] if h["source"] == "/assets/(.*)")
 assert next(h["value"] for h in asset_cache["headers"] if h["key"] == "Cache-Control") == "public, max-age=0, must-revalidate"
-assert 'href="/assets/styles.css?v=20261017-hero-cache-fix"' in source, "Stylesheet needs a fresh asset URL"
+assert 'href="/assets/styles.css?v=20261019-languages1"' in source, "Stylesheet needs a fresh asset URL"
 assert '<span class="tech-code code-one"></span>' in source
 assert '<span class="tech-code code-two"></span>' in source
 assert '<span class="tech-code code-three"></span>' in source
@@ -103,3 +103,21 @@ assert '<span class="tech-bracket bracket-one"></span>' in source
 assert ".hero-stage .code-one::before" in css and ".hero-stage .hero-computing-bg{position:absolute" in css
 assert source.count('class="hero-copy"') == 1 and source.count('class="hero-art"') == 1
 print("PASS: cache-busted stylesheet, no unstyled code, hero grid fallback")
+
+# All 21 user-provided Nigerian words must be present, accurately accented,
+# kept out of the normal hero grid and available as visible reference text.
+from html import unescape
+language_bg = source.split('<div class="hero-computing-bg" aria-hidden="true">',1)[1].split('<div class="hero-copy">',1)[0]
+assert language_bg.count('class="language-float language-') == 21
+assert 'id="languages"' in source and '<details class="language-details">' in source
+language_ref = source.split('id="languages"',1)[1].split('id="services"',1)[0]
+expected_languages = [["Yoruba","Wá","Across Nigeria",""],["Hausa","Zo","Across Nigeria",""],["Igbo","Bịa","Across Nigeria",""],["Tiv","Va","Middle Belt",""],["Ebira","Vevé","Middle Belt","Vee"],["Idoma","Bie","Middle Belt",""],["Berom (Plateau)","Vwé","Middle Belt",""],["Igala","Bí","Middle Belt",""],["Gbagyi","Be","Middle Belt",""],["Ibibio","Di","Niger Delta & South-South",""],["Efik","Di","Niger Delta & South-South",""],["Urhobo","Rho","Niger Delta & South-South",""],["Itsekiri","Wá","Niger Delta & South-South",""],["Isoko","Zio","Niger Delta & South-South",""],["Ijaw (Izon)","Bo","Niger Delta & South-South",""],["Edo (Bini)","Khian","Niger Delta & South-South","Vwá"],["Khana (Ogoni)","Inoo","Niger Delta & South-South",""],["Kanuri","Íso","Northern & North-Eastern","Káso"],["Fulfulde (Fula)","War","Northern & North-Eastern",""],["Nupe","Be","Northern & North-Eastern",""],["Jukun","Ba","Northern & North-Eastern",""]]
+for name,word,zone,alt in expected_languages:
+    assert f'data-word="{word}" data-language="{name}"' in language_bg, f"Missing floating word: {name} {word}"
+    assert f'class="language-name">{name}</span><strong lang="und">{word}</strong>' in language_ref, f"Missing language reference: {name} {word}"
+    if alt:
+        assert f'<small>or {alt}</small>' in language_ref, f"Missing alternative form: {name}"
+assert "language-float" in css and "silabs-word-drift" in css
+assert "content:attr(data-word)" in css
+assert "prefers-reduced-motion:reduce" in css
+print("PASS: 21 Nigerian languages, alternate forms, dynamic background and accessible reference")
