@@ -95,7 +95,7 @@ print("PASS: light animated computing hero, accessible motion, expanded company 
 # turn the decorative animation into a third grid column.
 asset_cache = next(h for h in headers["headers"] if h["source"] == "/assets/(.*)")
 assert next(h["value"] for h in asset_cache["headers"] if h["key"] == "Cache-Control") == "public, max-age=0, must-revalidate"
-assert 'href="/assets/styles.css?v=20261019-languages1"' in source, "Stylesheet needs a fresh asset URL"
+assert 'href="/assets/styles.css?v=20261020-business-audit1"' in source, "Stylesheet needs a fresh asset URL"
 assert '<span class="tech-code code-one"></span>' in source
 assert '<span class="tech-code code-two"></span>' in source
 assert '<span class="tech-code code-three"></span>' in source
@@ -121,3 +121,26 @@ assert "language-float" in css and "silabs-word-drift" in css
 assert "content:attr(data-word)" in css
 assert "prefers-reduced-motion:reduce" in css
 print("PASS: 21 Nigerian languages, alternate forms, dynamic background and accessible reference")
+
+# Conversion-first website and truthful contact workflow.
+assert 'id="start"' in source and source.count('class="offer-card"') == 3
+assert 'Software that helps you' in source and 'run, grow and serve better.' in source
+assert 'data-enquiry-service="Software development"' in source
+assert 'data-enquiry-service="Training &amp; academy"' in source
+assert source.index('id="services"') < source.index('id="languages"'), "Business services must precede language showcase"
+assert '<details><summary>How much does a project cost?' in source
+assert 'id="faq"' in source and 'href="#approach"' in source
+assert 'data-channel="whatsapp"' in source and 'data-channel="email"' in source
+for field_id in ("full-name", "service", "stage", "budget", "message"):
+    assert f'id="{field_id}"' in source, f"Missing enquiry field: {field_id}"
+assert 'method="get"' not in source.split('<form id="enquiry-form"', 1)[1].split("</form>", 1)[0]
+assert "This website does not collect or store enquiries directly." in source
+assert "https://wa.me/2349039930006?text=" in js
+assert "encodeURIComponent(body)" in js
+assert "event.submitter" in js and "form.reportValidity()" in js
+assert 'a[data-enquiry-service]' in js
+assert 'src="/assets/site.js?v=20261020-business-audit1"' in source
+assert 'Agape Dimas' not in source
+assert "Director of Public Relations and Human Resources" in source
+assert "HOSPITALITY TECHNOLOGY" in source
+print("PASS: offers, conversion flow, honest WhatsApp/email handoff, preserved company content")

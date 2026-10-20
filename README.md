@@ -10,7 +10,7 @@ Official corporate website source for **SIMEON'S LABORATORIES AND CO TECHNOLOGIE
 - Product showcase: UniXpress, CampPhoto AI, iRoya (hospitality and hotel booking/operations), MyPlatoon, TechDialect and Silabs AI. ChombuTar and CareerMirror appear separately as ecosystem partners. Maturity labels avoid misrepresenting development-stage products.
 - Eight leadership profiles, updated in October 2026: Abubakar Mustapha Sadiq now covers both Public Relations and Human Resources. The former HR director has been removed. Other appointments originate from the **2024–2025** company profile and should still be verified periodically.
 - Mobile navigation, keyboard-focus styles, reduced-motion handling and working enquiry flow.
-- A **mailto-based contact form**. It opens the visitor's email client and **does not send or store** enquiries. This is deliberate: no deceptive success message, server-side API key or database.
+- A **WhatsApp-first and email alternative enquiry form** with optional stage and budget context. It prepares the message client-side and requires the visitor to press Send in WhatsApp or email. No server-side message collection or analytics has been added.
 - Basic organisation structured data, social metadata, privacy page and security headers.
 - No build tool, framework or database. Suitable for Vercel or ordinary static hosting.
 
@@ -107,3 +107,7 @@ The stylesheet URL now has a revision query string, and `vercel.json` marks `/as
 The user-supplied words for **“come”** in 21 Nigerian languages are included in two complementary ways: as faint, CSS-animated language labels in the light hero's decorative background; and as a readable, expandable **Languages** section immediately underneath. The floating labels are generated with CSS `content: attr(data-word)` on otherwise-empty spans, so a stale stylesheet cannot expose a large block of unstyled text. The brand name, products and leadership are unchanged. The complete list includes regional groupings and supplied alternate forms for Ebira, Edo and Kanuri. The words and variations come from the supplied language list; spellings and regional use are not independently verified.
 
 To keep the page usable, the animation is intentionally quiet, reduces how many words are visible on smaller screens, and respects the system's reduced-motion setting. When updating the words, keep both the background labels and expanded reference in sync, then update `tests/smoke.py` and the stylesheet version parameter.
+
+## Business conversion audit (October 2026)
+
+See [`BUSINESS_AUDIT.md`](BUSINESS_AUDIT.md) for prioritised findings, changes, testing and missing evidence. The homepage now identifies who we help, offers three clear customer paths (Build, Improve, Equip), describes an engagement process and frequently asked questions, and keeps product statuses honest. The language explorer remains available but now follows the core business journey. WhatsApp-first enquiry **does not** claim a lead has been sent before a visitor sends it. Update stylesheet and JavaScript revision query strings whenever their files change.

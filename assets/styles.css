@@ -557,3 +557,82 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(prefers-reduced-motion:reduce){
   .hero-stage .hero-computing-bg .language-float{animation:none!important;will-change:auto}
 }
+
+
+/* Business clarity and conversion system | October 2026
+   Retain approved official blue identity and accessible animated hero. */
+.hero-stage .hero{min-height:610px;padding-block:70px 75px}
+.hero-stage .hero-copy{max-width:625px}
+.hero-stage .hero h1{font-size:clamp(39px,4.5vw,64px);line-height:1.13;letter-spacing:-.065em}
+.hero-stage .hero-lead{max-width:570px;color:#424a74;font-size:16px;line-height:1.75}
+.hero-stage .hero-copy::before{background:radial-gradient(ellipse at 48% 43%,rgba(255,255,255,.96) 0%,rgba(255,255,255,.84) 56%,rgba(255,255,255,0) 83%)}
+.hero-stage .hero-footnote{margin-top:28px}
+.hero-stage .hero-computing-bg .language-float{opacity:.13}
+.hero-stage .language-float::before{font-size:clamp(22px,2.6vw,35px)}
+.hero-stage .capability-inner{justify-content:center;gap:18px}
+.hero-stage .capability-inner strong{color:#242a72}
+.hero-stage .capability-band{background:#f0f2ff}
+.offers-section{padding:86px 0 95px;background:#fff}
+.offer-heading{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:30px}
+.offer-heading>div{flex:1}
+.offer-heading h2{font-family:Manrope,"DM Sans",sans-serif;font-size:clamp(30px,3.2vw,44px);line-height:1.2;letter-spacing:-.055em;color:#12194e;margin:0}
+.offer-heading p{max-width:330px;font-size:14px;color:#65708b;margin:0}
+.offers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.offer-card{padding:28px;background:#f8f9ff;border:1px solid #dfe3f6;border-radius:18px;display:flex;flex-direction:column;min-height:335px;transition:transform .2s,border-color .2s}
+.offer-card:hover{transform:translateY(-2px);border-color:#8f96dd}
+.offer-step{font-size:10px;color:#3435a2;letter-spacing:.13em;font-weight:900}
+.offer-card h3{font-family:Manrope,sans-serif;font-size:22px;line-height:1.25;letter-spacing:-.045em;margin:18px 0 11px;color:#141c51}
+.offer-card p{font-size:13px;color:#5c6684;margin:0 0 18px}
+.offer-result{border-top:1px solid #e0e5f5;padding-top:14px;display:grid;gap:5px;margin-top:auto}
+.offer-result strong{font-size:11px;color:#1a2174}
+.offer-result span{font-size:12px;color:#62708a;line-height:1.6}
+.offer-card a{font-size:12px;font-weight:900;color:#3130bc;margin-top:21px}
+.offer-notice{margin:20px 0 0;color:#626c88;font-size:12px}
+.offer-notice a{color:#3130bc;text-decoration:underline;text-underline-offset:3px;font-weight:800}
+.offers-section .section-kicker{margin-bottom:13px}
+.services-section{background:#fafbff}
+.services-section .service-card{background:#fff}
+.products-section{background:#f4f6ff}
+.products-section .product-text{min-height:190px}
+.approach-section{background:#fff}
+.faq-section{background:#f6f7fd}
+.faq-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:65px;align-items:start}
+.faq-layout h2{font-family:Manrope,sans-serif;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.055em;line-height:1.2}
+.faq-layout h2 span{color:#626e92}
+.faq-intro{margin-top:20px;color:#63718b;font-size:14px}
+.faq-list{border-top:1px solid #dce1f2}
+.faq-list details{border-bottom:1px solid #dce1f2;padding:0}
+.faq-list summary{position:relative;cursor:pointer;list-style:none;padding:19px 34px 19px 0;font-size:14px;font-weight:800;color:#192352}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;right:7px;top:16px;color:#3130bc;font-size:20px}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list details p{font-size:13px;color:#586580;margin:0 0 20px}
+.faq-list summary:focus-visible{outline:3px solid #777aff;outline-offset:3px;border-radius:4px}
+.language-section{padding:28px 0}
+.contact-intro h2{max-width:470px}
+.contact-form-card .form-intro{color:#5c6882;font-size:12px;margin:-8px 0 19px;line-height:1.6}
+.contact-form-card .optional-mark{font-weight:500;color:#71809b;font-size:11px}
+.contact-form-card .required-mark{color:#3130bc;font-weight:900}
+.contact-form-card input,.contact-form-card select,.contact-form-card textarea{background:#fff}
+.contact-submit-actions{display:grid;grid-template-columns:1.15fr .85fr;gap:10px}
+.contact-submit-actions .button{width:100%;min-width:0;padding:12px 10px;gap:8px;font-size:11px}
+.contact-submit-actions .button-primary{background:#3130bc;color:#fff}
+.contact-submit-actions .button-primary:hover{background:#211f90;color:#fff}
+.contact-submit-actions .button-email{background:#f0f1ff;color:#272e80;border:1px solid #d5dbf5}
+.contact-submit-actions .button-email:hover{background:#e7e9ff}
+.contact-form-card .form-disclaimer{line-height:1.65;color:#596883}
+@media(max-width:1050px){.hero-stage .hero h1{font-size:clamp(38px,5vw,54px)}.offers-grid{gap:13px}.offer-card{padding:22px;min-height:345px}}
+@media(max-width:760px){
+ .hero-stage .hero{min-height:auto;padding:58px 0 48px}
+ .hero-stage .hero h1{font-size:clamp(39px,8.5vw,56px)}
+ .hero-stage .hero-lead{font-size:15px}
+ .offer-heading{display:block}.offer-heading p{max-width:none;margin-top:12px}
+ .offers-section{padding:63px 0}
+ .offers-grid{grid-template-columns:1fr}
+ .offer-card{min-height:0}
+ .faq-section{padding:65px 0}
+ .faq-layout{grid-template-columns:1fr;gap:23px}
+ .contact-submit-actions{grid-template-columns:1fr}
+ .contact-submit-actions .button{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.offer-card:hover{transform:none}}

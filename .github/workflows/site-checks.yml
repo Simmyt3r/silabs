@@ -33,3 +33,5 @@ jobs:
         run: python tests/smoke.py
       - name: Check JavaScript syntax
         run: node --check assets/site.js
+      - name: Verify enquiry flows
+        run: node tests/contact-flow.cjs
